@@ -8,7 +8,7 @@ class Conectar {
         addslashes($this->user = $root);
         addslashes($this->pass = $blank);
         $con = mysql_connect($this->host, $this->user, $this->pass);
-        $db = mysql_select_db('Daniel');
+        mysql_select_db('Daniel');
         mysql_query('SET NAMES "utf8"');
         if(!$con){
            ?>
