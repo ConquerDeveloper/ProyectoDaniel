@@ -4,11 +4,11 @@ class Conectar {
     private $user;
     private $pass;
     public function conexion ($localhost, $root, $blank) {
-        addslashes($this->host = $localhost);
-        addslashes($this->user = $root);
-        addslashes($this->pass = $blank);
+        $this->host = $localhost;
+        $this->user = $root;
+        $this->pass = $blank;
         $con = mysql_connect($this->host, $this->user, $this->pass);
-        mysql_select_db('Daniel');
+        mysql_select_db('daniel');
         mysql_query('SET NAMES "utf8"');
         if(!$con){
            ?>
